@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="construir()">
+    <div class="App">
+        <div class="form ">
+            <h1>CLIENTE</h1>
+            <div>
+            
+                <input type="text" class="form-control" id="cliente_id" placeholder="" readonly>
+                <input type="text" class="form-control" id="nombre" placeholder="Nombre" >
+                <input type="text" class="form-control" id="apellido" placeholder="Apellido" >
+                <input type="text" class="form-control" id="correo" placeholder="Correo" >
+                <input type="text" class="form-control" id="documento_identidad" placeholder="Documento de identidad" >
+                <input type="text" class="form-control" id="telefono" placeholder="Telefono" >
+
+                <div class="btn-group">
+                    <button onclick="InsertCliente()" class="btn btn-success">Insertar</button>
+                    <button onclick="Clear()" class="btn btn-danger">Limpiar</button>
+                    <button onclick="UpdateCliente()" class="btn btn-warning">Editar</button>
+                    <a href="index.html" class="btn btn-primary">Volver al inicio</a>
+                </div>
+                
+
+            
+
+            </div>
+        </div>
+
+        <div class="container-sm">
+            <table class="table table-dark table-bordered">
+                <thead>
+                    <td>ID</td>
+                    <td>Nombre</td>
+                    <td>Apellido</td>
+                    <td>Correo</td>
+                    <td>Documento de identidad</td>
+                    <td>Telefono</td>
+                    <td>Accion</td>
+                </thead>
+                <tbody id="tabla-clientes">
+        
+                </tbody>
+            </table>
+        </div>
+    </div>  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="app-cliente.js"></script>
+</body>
+</html>
